@@ -75,14 +75,40 @@ def inverse_document_function(retweet_id, collection):
 def bm25f(retweet_id, collection):
 
   weight = weight(retweet_id, collection)
-  print()
+  print(f'Weight value: {weight}')
   idf = inverse_document_function(retweet_id, collection)
+  print(f'Inverse document value: {idf}')
   k1 = 1.5
 
   return (weight/(k1 + weight)) * idf
 
+def evaluate_credibility(collection):
+  print('Evaluating credibility collection...')
 
-def check_credibility(collection):
+  results = []
+
+  for item in collection:
+    referenced_tweet_id = item['referenced_tweets'][0]['id']
+    referenced_tweet_author_id = item['referenced_tweets'][0]['author_id']
+
+    print(
+    f'Evaluating credibility of tweet id: {item['id']}\n'+
+    'Tweet text: {item['text']}\n'+
+    'Retweet id: {referenced_tweet_id}' +
+    'Retweet author id: {referenced_tweet_author_id}\n' +
+    )
+
+    result = bm25f(referenced_tweet_id, collection)
+
+    print(f'Bm25f value: {result}')
+
+    results.append({'tweet_data': item, 'bm25f_result': result})
+
+  return results
+
+def check_credibility(evaluate_results):
+  average = sum(map(lambda result: result['bm25f_result'], evaluate_results)) / len(evaluate_results)
+
 
 
 
