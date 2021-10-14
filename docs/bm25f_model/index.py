@@ -3,6 +3,16 @@ import requests
 import os
 
 def twitter_api(route, params):
+  """Utilitarian fuction to send Http requests to Twitter API
+
+  Parameters:
+    route (string): route of Twitter endpoint
+    params (dict): query params of Twitter endpoint
+
+  Result:
+    dict: Twitter endpoint response on json
+  """
+
   host = "https://api.twitter.com"
   url = host + route
   token = os.getenv('TWITTER_API_TOKEN')
@@ -13,6 +23,17 @@ def twitter_api(route, params):
   return response.json()
 
 def get_tweet_collection(hashtag, max_results = 10):
+  """Get a collections of tweets about a specfic hashtag
+
+  Parameters:
+    route (string): route of Twitter endpoint
+    params (dict): query params of Twitter endpoint
+
+  Result:
+    dict: Twitter endpoint response on json
+  """
+
+
   query = hashtag + ' is:quote is:retweet'
   expansions = 'referenced_tweets.id.author_id'
   max_results = max_results
@@ -93,9 +114,9 @@ def evaluate_credibility(collection):
 
     print(
     f'Evaluating credibility of tweet id: {item['id']}\n'+
-    'Tweet text: {item['text']}\n'+
-    'Retweet id: {referenced_tweet_id}' +
-    'Retweet author id: {referenced_tweet_author_id}\n' +
+    f'Tweet text: {item['text']}\n'+
+    f'Retweet id: {referenced_tweet_id}' +
+    f'Retweet author id: {referenced_tweet_author_id}\n' +
     )
 
     result = bm25f(referenced_tweet_id, collection)
@@ -107,14 +128,32 @@ def evaluate_credibility(collection):
   return results
 
 def check_credibility(evaluate_results):
+  print('Checking credibility collection...')
+
   average = sum(map(lambda result: result['bm25f_result'], evaluate_results)) / len(evaluate_results)
 
+  print(f'Bm25f collection average: {average}')
 
+  has_credibility = []
+  not_has_credibility = []
 
+  for result in evaluate_results:
+    if result['bm25f_result'] >= average:
+      print(f"Tweet id {result['tweet_data']['id']} has credibility")
+      has_credibility.append(result)
+    else:
+      print(f"Tweet id {result['tweet_data']['id']} not has credibility")
+      not_has_credibility.append(result)
+
+  print(
+    f'Final checking result: \n' +
+    f'Tweets have credibility: {has_credibility}\n' +
+    f'Tweets not have credibility: {not_has_credibility}\n'
+    )
 
 def main():
-  collection = get_tweet_collection('#crazy')
-  some_id = collection[0]['referenced_tweets'][0]['author_id']
-  print(get_user_info(some_id))
+  collection = get_tweet_collection('#crazy', 80)
+  evaluate_result = evaluate_credibility(collection)
+  check_credibility(evaluate_result)
 
 main()
