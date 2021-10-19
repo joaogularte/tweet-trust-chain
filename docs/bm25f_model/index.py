@@ -23,16 +23,29 @@ def twitter_api(route, params):
   return response.json()
 
 def get_tweet_collection(hashtag, max_results = 10):
-  """Get a collections of tweets about a specfic hashtag
+  """Get a collections of tweets based on retweets about a specfic hashtag
 
   Parameters:
-    route (string): route of Twitter endpoint
-    params (dict): query params of Twitter endpoint
+    hashtag (string): hashtag related with tweets
+    max_results (int): the maximum number of result to be returned
 
   Result:
-    dict: Twitter endpoint response on json
-  """
+    list: collection of items which have the following struct:
 
+        {
+          'id': (string),
+          'author_id': (string),
+          'text': (string),
+          'referenced_tweets': [
+            {
+              'type': (string ),
+              'id': (string),
+              'author_id': (string)
+            }
+          ]
+        }
+
+  """
 
   query = hashtag + ' is:quote is:retweet'
   expansions = 'referenced_tweets.id.author_id'
@@ -45,6 +58,22 @@ def get_tweet_collection(hashtag, max_results = 10):
   return parse_tweet_collection(response)
 
 def get_user_info(id):
+  """Get information about user profile
+
+  Parameters:
+    id (string): user identification
+
+  Result:
+    dict: dictonary with user information:
+
+        {
+          'id': (string),
+          'followers': (string),
+          'tweets': (string)
+        }
+
+  """
+
   url = '/2/users/' + id
   params = {'user.fields': 'public_metrics'}
 
@@ -76,7 +105,20 @@ def parse_tweet_collection(response):
 def parse_user_info(response):
   return {'id': response['data']['id'], 'followers': response['data']['public_metrics']['followers_count'], 'tweets': response['data']['public_metrics']['tweet_count']}
 
+def bm25f(retweet_id, collection):
+  print("Computing Bm25f value...\n")
+  w = weight(retweet_id, collection)
+  print(f"Weight value: {w}\n")
+  idf = inverse_document_function(retweet_id, collection)
+  print(f"Inverse document value: {idf}\n")
+  k1 = 1.5
+
+  print(f"Bm25f formula: ({w}/({k1} + {w})) x {idf}\n\n")
+
+  return (w/(k1 + w)) * idf
+
 def weight(retweet_id, collection):
+  print("Computing Weight factor...\n")
   occurs = sum(map(lambda item: item['referenced_tweets'][0]['id'] == retweet_id, collection))
   boost = 3.55
   author_id = next(tweet['referenced_tweets'][0]['author_id'] for tweet in collection if tweet['referenced_tweets'][0]['id'] == retweet_id)
@@ -84,27 +126,33 @@ def weight(retweet_id, collection):
   user_info = get_user_info(author_id)
   user_tweets = user_info['tweets']
   user_followers = user_info['followers']
-
-  return (occurs * boost)/((1 - b) + b x (user_tweets/user_followers))
+  print(
+    f"Weight factor variables:\n" +
+    f"Occurs: {occurs}\n" +
+    f"Boost: {boost}\n"+
+    f"User Tweets: {user_tweets}\n" +
+    f"User Followers: {user_followers}\n" +
+    f"B: {b}\n\n"+
+    f"Weight formula: ({occurs} X {boost})/((1 - {b}) + {b} x ({user_tweets}/{user_followers}))\n\n"
+  )
+  return (occurs * boost)/((1 - b) + b * (user_tweets/user_followers))
 
 def inverse_document_function(retweet_id, collection):
+  print("Computing Inverse document function factor...\n")
+
   number_of_tweets = len(collection)
   number_of_tweets_related_with_retweet_id = sum(map(lambda item: item['referenced_tweets'][0]['id'] == retweet_id, collection))
 
+  print(
+    f"Tweet number inside collection: {number_of_tweets}\n"
+    f"Tweet number linked with retweet inside collection: {number_of_tweets_related_with_retweet_id}\n\n"
+    f"Inserve document function formula: log ({number_of_tweets} + {number_of_tweets_related_with_retweet_id} + 0.5) / ({number_of_tweets_related_with_retweet_id} + 0.5)\n\n"
+  )
+
   return math.log((number_of_tweets + number_of_tweets_related_with_retweet_id + 0.5) / (number_of_tweets_related_with_retweet_id + 0.5))
 
-def bm25f(retweet_id, collection):
-
-  weight = weight(retweet_id, collection)
-  print(f'Weight value: {weight}')
-  idf = inverse_document_function(retweet_id, collection)
-  print(f'Inverse document value: {idf}')
-  k1 = 1.5
-
-  return (weight/(k1 + weight)) * idf
-
 def evaluate_credibility(collection):
-  print('Evaluating credibility collection...')
+  print('Evaluating credibility collection...\n')
 
   results = []
 
@@ -113,26 +161,28 @@ def evaluate_credibility(collection):
     referenced_tweet_author_id = item['referenced_tweets'][0]['author_id']
 
     print(
-    f'Evaluating credibility of tweet id: {item['id']}\n'+
-    f'Tweet text: {item['text']}\n'+
-    f'Retweet id: {referenced_tweet_id}' +
-    f'Retweet author id: {referenced_tweet_author_id}\n' +
+    f"Evaluating credibility of tweet id: {item['id']}\n"+
+    f"Tweet text: {item['text']}\n"+
+    f"Retweet id: {referenced_tweet_id}\n" +
+    f"Retweet author id: {referenced_tweet_author_id}\n"
     )
 
     result = bm25f(referenced_tweet_id, collection)
 
-    print(f'Bm25f value: {result}')
+    print(f"Bm25f value: {result}\n")
+
+    print('--------------------------------------\n')
 
     results.append({'tweet_data': item, 'bm25f_result': result})
 
   return results
 
 def check_credibility(evaluate_results):
-  print('Checking credibility collection...')
+  print('Checking credibility collection...\n')
 
   average = sum(map(lambda result: result['bm25f_result'], evaluate_results)) / len(evaluate_results)
 
-  print(f'Bm25f collection average: {average}')
+  print(f"Bm25f collection average: {average}\n")
 
   has_credibility = []
   not_has_credibility = []
@@ -146,13 +196,17 @@ def check_credibility(evaluate_results):
       not_has_credibility.append(result)
 
   print(
-    f'Final checking result: \n' +
-    f'Tweets have credibility: {has_credibility}\n' +
-    f'Tweets not have credibility: {not_has_credibility}\n'
+    f"Final checking result: \n\n" +
+    f"Tweets have credibility: {has_credibility}\n\n" +
+    f"Tweets not have credibility: {not_has_credibility}\n\n"
     )
 
 def main():
-  collection = get_tweet_collection('#crazy', 80)
+
+  hashtag = '#crazy'
+  max_results = 10
+
+  collection = get_tweet_collection(hashtag, max_results)
   evaluate_result = evaluate_credibility(collection)
   check_credibility(evaluate_result)
 

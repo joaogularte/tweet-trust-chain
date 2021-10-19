@@ -1,0 +1,525 @@
+Evaluating credibility collection...
+
+Evaluating credibility of tweet id: 1448719205512073235
+Tweet text: RT @mochinyanco: 今日頑張れば明日はレバンガ💚って思いながら１日を乗り越えた人たくさんいるんだろうな☺
+もちろん私もその内のひとりです✨
+やはりレバンガは生きがいなのです🏀💚✨
+#レバンガ北海道
+#CRAZY
+Retweet id: 1449000661639565312
+Retweet author id: 389888693
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 15524
+User Followers: 357
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (15524/357))
+
+Weight value: 0.134009009009009
+
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+Inverse document value: 2.03688192726104
+
+Bm25f formula: (0.134009009009009/(1.5 + 0.134009009009009)) x 2.03688192726104
+
+
+Bm25f value: 0.16704958604001638
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448992240894832654
+Tweet text: RT @sm00thcruz: The Prophets are here! #listen the giants are coming! #storytelling #originalart all hand drawn! #crazy #nftcollector #NFTa…
+Retweet id: 1448719205512073235
+Retweet author id: 594278885
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 3
+Boost: 3.55
+User Tweets: 415
+User Followers: 44
+B: 0.6
+
+Weight formula: (3 X 3.55)/((1 - 0.6) + 0.6 x (415/44))
+
+
+Weight value: 1.7576894223555886
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 3
+
+Inserve document function formula: log (10 + 3 + 0.5) / (3 + 0.5)
+
+
+Inverse document value: 1.349926716949016
+Bm25f formula: (1.7576894223555886/(1.5 + 1.7576894223555886)) x 1.349926716949016
+
+
+Bm25f value: 0.7283542424436485
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448979366663360515
+Tweet text: RT @HagerNation: This is why a coach pushes so hard EVERY SINGLE DAY!  People that believe in you see the best you - where you can be when…
+Retweet id: 1446523367259979784
+Retweet author id: 227353562
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 4906
+User Followers: 3749
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (4906/3749))
+
+
+Weight value: 2.9953524486856318
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+
+Inverse document value: 2.03688192726104
+Bm25f formula: (2.9953524486856318/(1.5 + 2.9953524486856318)) x 2.03688192726104
+
+
+Bm25f value: 1.3572193366704208
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448877696516251652
+Tweet text: RT @reima_kokkonen: Australia iskee uudet koronalait kehiin. Jos et ota pakko piikkiä 13.11. mennessä ja olet asiakaspalvelu duunissa niin…
+Retweet id: 1448597236628299776
+Retweet author id: 4143184097
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 2
+Boost: 3.55
+User Tweets: 12902
+User Followers: 1374
+B: 0.6
+
+Weight formula: (2 X 3.55)/((1 - 0.6) + 0.6 x (12902/1374))
+
+
+Weight value: 1.176653640179476
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 2
+
+Inserve document function formula: log (10 + 2 + 0.5) / (2 + 0.5)
+
+
+Inverse document value: 1.6094379124341003
+Bm25f formula: (1.176653640179476/(1.5 + 1.176653640179476)) x 1.6094379124341003
+
+
+Bm25f value: 0.7075069220317427
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448837764854784000
+Tweet text: RT @doug_maga: #PatriotsUnite this is who we are fighting 🤛 #crazy #Marxist #Liberals https://t.co/gZGw0JlNsJ
+Retweet id: 1448835072728223747
+Retweet author id: 4867653783
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 14179
+User Followers: 10875
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (14179/10875))
+
+
+Weight value: 3.0026482803677257
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+
+Inverse document value: 2.03688192726104
+Bm25f formula: (3.0026482803677257/(1.5 + 3.0026482803677257)) x 2.03688192726104
+
+
+Bm25f value: 1.3583206227475912
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448783090906718211
+Tweet text: RT @sm00thcruz: The Prophets are here! #listen the giants are coming! #storytelling #originalart all hand drawn! #crazy #nftcollector #NFTa…
+Retweet id: 1448719205512073235
+Retweet author id: 594278885
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 3
+Boost: 3.55
+User Tweets: 415
+User Followers: 44
+B: 0.6
+
+Weight formula: (3 X 3.55)/((1 - 0.6) + 0.6 x (415/44))
+
+
+Weight value: 1.7576894223555886
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 3
+
+Inserve document function formula: log (10 + 3 + 0.5) / (3 + 0.5)
+
+
+Inverse document value: 1.349926716949016
+Bm25f formula: (1.7576894223555886/(1.5 + 1.7576894223555886)) x 1.349926716949016
+
+
+Bm25f value: 0.7283542424436485
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448764988793909248
+Tweet text: RT @sm00thcruz: The Prophets are here! #listen the giants are coming! #storytelling #originalart all hand drawn! #crazy #nftcollector #NFTa…
+Retweet id: 1448719205512073235
+Retweet author id: 594278885
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 3
+Boost: 3.55
+User Tweets: 415
+User Followers: 44
+B: 0.6
+
+Weight formula: (3 X 3.55)/((1 - 0.6) + 0.6 x (415/44))
+
+
+Weight value: 1.7576894223555886
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 3
+
+Inserve document function formula: log (10 + 3 + 0.5) / (3 + 0.5)
+
+
+Inverse document value: 1.349926716949016
+Bm25f formula: (1.7576894223555886/(1.5 + 1.7576894223555886)) x 1.349926716949016
+
+
+Bm25f value: 0.7283542424436485
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448598061580759042
+Tweet text: RT @reima_kokkonen: Australia iskee uudet koronalait kehiin. Jos et ota pakko piikkiä 13.11. mennessä ja olet asiakaspalvelu duunissa niin…
+Retweet id: 1448597236628299776
+Retweet author id: 4143184097
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 2
+Boost: 3.55
+User Tweets: 12902
+User Followers: 1374
+B: 0.6
+
+Weight formula: (2 X 3.55)/((1 - 0.6) + 0.6 x (12902/1374))
+
+
+Weight value: 1.176653640179476
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 2
+
+Inserve document function formula: log (10 + 2 + 0.5) / (2 + 0.5)
+
+
+Inverse document value: 1.6094379124341003
+Bm25f formula: (1.176653640179476/(1.5 + 1.176653640179476)) x 1.6094379124341003
+
+
+Bm25f value: 0.7075069220317427
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448288985898491906
+Tweet text: RT @ValdaDeDieu: Many! #Ignorant, #Immoral or #Crazy? They'd have let me down next. When people show you who they are...
+
+And by the way, #…
+Retweet id: 1448288358455824394
+Retweet author id: 156504737
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 53173
+User Followers: 5955
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (53173/5955))
+
+
+Weight value: 0.616589083527291
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+
+Inverse document value: 2.03688192726104
+Bm25f formula: (0.616589083527291/(1.5 + 0.616589083527291)) x 2.03688192726104
+
+
+Bm25f value: 0.5933693840517218
+
+--------------------------------------
+
+Evaluating credibility of tweet id: 1448235800714379264
+Tweet text: RT @levanga_naruto: #ザンギ部部長 折茂輝文がこの後17:30〜 #STV さん「#どさんこワイド」#お絵かきですよ に登場！🐤🍗🏀🔥
+
+果たして部長はどんな絵を描くのか…🤔
+準備はバッチリです！
+
+ぜひ番組をご覧くださいませ🎨👀
+
+#なると屋 #レバンガ北…
+Retweet id: 1447473456979660802
+Retweet author id: 1431138049883209730
+
+Computing Bm25f value...
+
+Computing Weight factor...
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 29
+User Followers: 216
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (29/216))
+
+
+Weight value: 7.387283236994219
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+
+Inverse document value: 2.03688192726104
+Bm25f formula: (7.387283236994219/(1.5 + 7.387283236994219)) x 2.03688192726104
+
+
+Bm25f value: 1.6930960019769818
+
+--------------------------------------
+
+Checking credibility collection...
+
+Bm25f value: 0.16704958604001638
+
+Bm25f collection average: 0.8769131502881164
+
+Tweet id 1449012365618335753 not has credibility
+Tweet id 1448992240894832654 not has credibility
+Tweet id 1448979366663360515 has credibility
+Tweet id 1448877696516251652 not has credibility
+Tweet id 1448837764854784000 has credibility
+Tweet id 1448783090906718211 not has credibility
+Tweet id 1448764988793909248 not has credibility
+Tweet id 1448598061580759042 not has credibility
+Tweet id 1448288985898491906 not has credibility
+Tweet id 1448235800714379264 has credibility
+Final checking result:
+
+Tweets have credibility: [{'tweet_data': {'id': '1448979366663360515', 'author_id': '375263857', 'text': 'RT @HagerNation: This is why a coach pushes so hard EVERY SINGLE DAY!  People that believe in you see the best you - where you can be when…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1446523367259979784', 'author_id': '227353562'}]}, 'bm25f_result': 1.3572193366704208}, {'tweet_data': {'id': '1448837764854784000', 'author_id': '747243487540748288', 'text': 'RT @doug_maga: #PatriotsUnite this is who we are fighting 🤛 #crazy #Marxist #Liberals https://t.co/gZGw0JlNsJ', 'referenced_tweets': [{'type': 'retweeted', 'id': '1448835072728223747', 'author_id': '4867653783'}]}, 'bm25f_result': 1.3583206227475912}, {'tweet_data': {'id': '1448235800714379264', 'author_id': '1293446480364068864', 'text': 'RT @levanga_naruto: #ザンギ部部長 折茂輝文がこの後17:30〜 #STV さん「#どさんこワイド」#お絵かきですよ に登場！🐤🍗🏀🔥\n\n果たして部長はどんな絵を描くのか…🤔\n準備はバッチリです！\n\nぜひ番組をご覧くださいませ🎨👀\n\n#なると屋 #レバンガ北…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1447473456979660802', 'author_id': '1431138049883209730'}]}, 'bm25f_result': 1.6930960019769818}]
+
+Tweets not have credibility: [{'tweet_data': {'id': '1449012365618335753', 'author_id': '1382304798414839809', 'text': 'RT @mochinyanco: 今日頑張れば明日はレバンガ💚って思いながら１日を乗り越えた人たくさんいるんだろうな☺\nもちろん私もその内のひとりです✨\nやはりレバンガは生きがいなのです🏀💚✨\n#レバンガ北海道\n#CRAZY', 'referenced_tweets': [{'type': 'retweeted', 'id': '1449000661639565312', 'author_id': '389888693'}]}, 'bm25f_result': 0.16704958604001638}, {'tweet_data': {'id': '1448992240894832654', 'author_id': '329136400', 'text': 'RT @sm00thcruz: The Prophets are here! #listen the giants are coming! #storytelling #originalart all hand drawn! #crazy #nftcollector #NFTa…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1448719205512073235', 'author_id': '594278885'}]}, 'bm25f_result': 0.7283542424436485}, {'tweet_data': {'id': '1448877696516251652', 'author_id': '1292408741380456449', 'text': 'RT @reima_kokkonen: Australia iskee uudet koronalait kehiin. Jos et ota pakko piikkiä 13.11. mennessä ja olet asiakaspalvelu duunissa niin…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1448597236628299776', 'author_id': '4143184097'}]}, 'bm25f_result': 0.7075069220317427}, {'tweet_data': {'id': '1448783090906718211', 'author_id': '1150032521041797120', 'text': 'RT @sm00thcruz: The Prophets are here! #listen the giants are coming! #storytelling #originalart all hand drawn! #crazy #nftcollector #NFTa…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1448719205512073235', 'author_id': '594278885'}]}, 'bm25f_result': 0.7283542424436485}, {'tweet_data': {'id': '1448764988793909248', 'author_id': '1355176225304506369', 'text': 'RT @sm00thcruz: The Prophets are here! #listen the giants are coming! #storytelling #originalart all hand drawn! #crazy #nftcollector #NFTa…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1448719205512073235', 'author_id': '594278885'}]}, 'bm25f_result': 0.7283542424436485}, {'tweet_data': {'id': '1448598061580759042', 'author_id': '1138978717437485056', 'text': 'RT @reima_kokkonen: Australia iskee uudet koronalait kehiin. Jos et ota pakko piikkiä 13.11. mennessä ja olet asiakaspalvelu duunissa niin…', 'referenced_tweets': [{'type': 'retweeted', 'id': '1448597236628299776', 'author_id': '4143184097'}]}, 'bm25f_result': 0.7075069220317427}, {'tweet_data': {'id': '1448288985898491906', 'author_id': '156504737', 'text': "RT @ValdaDeDieu: Many! #Ignorant, #Immoral or #Crazy? They'd have let me down next. When people show you who they are...\n\nAnd by the way, #…", 'referenced_tweets': [{'type': 'retweeted', 'id': '1448288358455824394', 'author_id': '156504737'}]}, 'bm25f_result': 0.5933693840517218}]
+
+
+
+Análise:
+
+Como o bm25f se comporta se o numero de seguidores do perfil dono do retweet variar positivamente ou negativamente?
+
+Avaliando o exemplo do tweet id 1448719205512073235 conectado com o retweet id 1449000661639565312:
+
+Variaveis atuais:
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 15524
+User Followers: 357
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (15524/357))
+
+Weight value: 0.134009009009009
+
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+Inverse document value: 2.03688192726104
+
+Bm25f formula: (0.134009009009009/(1.5 + 0.134009009009009)) x 2.03688192726104
+
+Bm25f value: 0.16704958604001638
+
+Variaveis alteradas:
+
+Weight factor variables:
+Occurs: 2
+Boost: 3.55
+User Tweets: 15524
+User Followers: 3057
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (15524/3057))
+
+Weight value: 1.0299083247921648
+
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+Inverse document value: 2.03688192726104
+
+Bm25f formula: (1.0299083247921648/(1.5 + 1.0299083247921648)) x 2.03688192726104
+
+Bm25f value: 0.16704958604001638
+Bm25f value: 0.8292006603350701
+
+Bm25f collection average: 0.8769131502881164
+
+
+Como o bm25f se comporta se o numero de postagens do perfil dono do retweet variar positivamente ou negativamente?
+
+Como o bm25f se comporta se o numero de tweets relacionados com o um retweet dentro da coleção variar positivamente ou negativamente?
+
+Avaliando o exemplo do tweet id 1448719205512073235 conectado com o retweet id 1449000661639565312:
+
+Variaveis atuais:
+
+Weight factor variables:
+Occurs: 1
+Boost: 3.55
+User Tweets: 15524
+User Followers: 357
+B: 0.6
+
+Weight formula: (1 X 3.55)/((1 - 0.6) + 0.6 x (15524/357))
+
+Weight value: 0.134009009009009
+
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 1
+
+Inserve document function formula: log (10 + 1 + 0.5) / (1 + 0.5)
+
+Inverse document value: 2.03688192726104
+
+Bm25f formula: (0.134009009009009/(1.5 + 0.134009009009009)) x 2.03688192726104
+
+Bm25f value: 0.16704958604001638
+
+Variaveis alteradas:
+
+Weight factor variables:
+Occurs: 3
+Boost: 3.55
+User Tweets: 15524
+User Followers: 357
+B: 0.6
+
+Weight formula: (3 X 3.55)/((1 - 0.6) + 0.6 x (15524/357))
+
+Weight value: 0.402027027027027
+
+Computing Inverse document function factor...
+
+Tweet number inside collection: 10
+Tweet number linked with retweet inside collection: 3
+
+Inserve document function formula: log (10 + 3 + 0.5) / (3 + 0.5)
+
+Inverse document value: 2.03688192726104
+Inverse document value: 1.349926716949016
+
+Bm25f formula: (0.402027027027027/(1.5 + 0.402027027027027)) x 1.349926716949016
+
+Bm25f value: 0.16704958604001638
+Bm25f value: 0.2853308691242147
+
+Bm25f collection average: 0.8769131502881164
+
+
+Como a bm25f se comporta se o numero de tweets da coleção analisada variar positivamente ou negativamente?
