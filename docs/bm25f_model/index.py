@@ -204,7 +204,7 @@ def check_credibility(evaluate_results):
 def main():
 
   hashtag = '#crazy'
-  max_results = 10
+  max_results = 100
 
   collection = get_tweet_collection(hashtag, max_results)
   evaluate_result = evaluate_credibility(collection)
