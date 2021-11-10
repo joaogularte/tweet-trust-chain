@@ -19,6 +19,7 @@ const createRequest = (input, callback) => {
       if (response.error) {
         response = {
           status: 404,
+          data: response
         }
         callback(response.status, Requester.success(jobRunID, response))
       } else {

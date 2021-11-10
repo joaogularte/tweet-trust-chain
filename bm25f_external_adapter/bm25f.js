@@ -156,6 +156,3 @@ const evaluateCredibilityPerRetweedId = async (hashtag, retweetId) => {
 }
 
 module.exports = evaluateCredibilityPerRetweedId
-
-
-//evaluateCredibilityPerRetweedId("#crazy", "1456765720143044610").then(response => console.log(response))
